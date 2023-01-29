@@ -1,0 +1,21 @@
+@layer carousel, bulma, special-styles;
+
+@layer carousel {
+    @import "../node_modules/bulma-carousel/src/sass/index.sass";
+}
+
+@layer bulma {
+    @charset "utf-8";
+    @import "../node_modules/bulma/bulma.sass";
+};
+
+@layer special-styles {
+    @import "./partials/variables";
+    @import "./partials/mixins";
+    @import "./partials/global";
+    @import "./partials/footer";
+    @import "./partials/main";
+    @import "./partials/header";
+    @import "./partials/hero";
+    @import "./partials/form";
+};

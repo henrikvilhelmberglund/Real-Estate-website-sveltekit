@@ -1,0 +1,207 @@
+
+main {
+    margin: 0 24px;
+    background-color: $neutralClr;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 24px 12px;
+    
+    @media ($tablet) {
+        padding: 24px 32px;
+        margin-inline: auto;
+        width: min(90%, 70.5rem);
+    }
+    @media ($desktop) {
+        padding-top: 74.61px;
+    }
+}
+
+//STARTSIDA MAIN
+
+.homepage-grid {
+    h2 {
+        font-size: 1.5rem;
+        padding-left: 12px;
+        margin-bottom: 1em;
+    }
+
+    .image-container {
+        position: relative;
+        text-align: center;
+    }
+
+    .image-text-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: hsla(304, 100%, 0%, 0.6);
+        padding: 1rem;
+        border-radius: 0.5rem;
+        p {
+            color: white;
+            margin-bottom: 1em;
+        };
+    }
+}
+
+//ABOUT MAIN
+.about-page-hero {
+    .hero {
+        &.has-background {
+            background-image: url('/pictures/slider2.jpeg');
+        };
+        .hero-body {
+            @include flex ($justify: center);
+        };
+    };
+
+};
+
+.about-page {
+    padding-top: 36px;
+    h2 {
+        font-size: 1.5rem;
+        margin-bottom: 1em;
+    };
+    .employees-grid {
+        h2 {
+            padding-left: 12px;
+        };
+        padding-top: 36px;
+    };
+    @media($desktop) {
+        .history {
+            section {
+                padding: 0 48px;
+            }
+
+            p {
+                padding-bottom: 0.75rem;
+            }
+        };
+    };
+};
+
+
+
+//KONTAKT MAIN
+
+.office {
+    padding-bottom: 12px;
+    img {
+        width: 100%;
+        min-height: 100%;
+        object-fit: cover;
+        vertical-align: middle;
+        @media ($tablet) {
+            max-height: 350px;
+        };
+    };
+    h1 {
+        padding-left: 0;
+    };
+    .contact-details{
+        div {
+            padding: 8px 8px 0;
+            &.phone {
+                padding-top: 0;
+            };
+            p span { 
+                font-family: $family-primary;
+                font-weight: 800;
+            };
+        };
+    };
+};
+
+#valuationForm {
+    display: none;
+};
+
+ //TILL SALU MAIN
+   
+ .object-grid {
+    @include flex ($direction: column);
+    gap: 24px;
+    .object-row {
+        border-top: 1px solid $textClr;
+        &:hover {
+            cursor: pointer;
+            .object-img {
+                opacity: 0.7;
+            };
+        };
+        .holder {
+                margin-top: 12px;
+        };
+        .object-img {
+            @include imgAdjuster();
+            @media ($tablet) {
+                max-height: 250px;
+            };
+        };  
+        .property-description {
+            text-align: center;
+            .city {
+                @include flex (center, center, default);
+                gap: 1rem;
+                .logo-mini {
+                    width: 30px;
+                };
+                @media ($tablet) {
+                    @include flex (flex-start, center);
+                };
+            };
+            .spec {
+                @include flex (space-between, center);
+            };
+            @media ($tablet) {
+                @include flex (space-between, default , column);
+                text-align: start;
+                .holder {
+                    margin-top: 0px;
+                };
+            };
+        };
+    };
+};
+
+
+// SÄLJ MED OSS
+.sell-page {
+    .sell-page-hero {
+        .hero {
+            &.has-background {
+                background-image: url('/pictures/slider1.jpeg');       
+            };
+            .hero-body {
+                @include flex ($justify: center);
+                .hero-item-wrapper {
+                    width: 300px;
+                };
+            };
+        };
+    };
+    .services {
+        padding: 24px 12px 12px;
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1em;
+            @media ($tablet) {
+                text-align: center;
+            };
+        };
+        .column {
+            @media ($tablet) {
+                @include flex(default, center, column);
+            };
+        };
+    };
+    .form-header p:first-child {
+        font-family: $family-primary;
+        font-weight: 800;
+        margin-bottom: 1em;
+    }
+};
+

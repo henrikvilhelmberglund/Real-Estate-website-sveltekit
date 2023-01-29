@@ -1,0 +1,27 @@
+.hero {
+    &.has-background {
+        background-image: url('/pictures/sliderx.jpeg');
+        background-position: center center;
+        background-size: cover;
+    };
+
+    .hero-body {
+        .hero-item-wrapper {
+            width: 400px;
+            background-color: hsla(304, 100%, 0%, 0.6);
+            padding: 1rem;
+            border-radius: 0.5rem;
+            h1,
+            p {
+                color: white;
+                margin-bottom: 1em;
+            };
+        };
+    };
+
+    .slogan {
+        font-family: $family-primary;
+        font-weight: 600;
+        font-size: small;
+    };
+};
